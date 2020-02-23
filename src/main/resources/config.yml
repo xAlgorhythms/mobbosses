@@ -1,0 +1,69 @@
+# Configuration for MobBosses
+
+# Do NOT change ANY of the labels. ONLY CHANGE VALUES.
+# If your plugin isn't working properly, delete your config file and
+# restart your server to generate a new one, and try again.
+
+Bosses:
+  ZombieBoss:
+    # The name of the boss.
+    Name: 'Zombie Boss'
+    # Whether or not the boss's name should be displayed like a name-tag in-game.
+    NameIsVisible: true
+    # Leave region values blank until set for the first time in-game with "/mb setpos1" and "/mb setpos2 commands
+    Region:
+      Position1:
+      Position2:
+      x1: 0.0
+      y1: 0.0
+      z1: 0.0
+      x2: 0.0
+      y2: 0.0
+      z2: 0.0
+    # Max health, half-hearts. MC default = 20
+    MaxHealth: 400.0
+    # Base movement speed. MC default = 1.0
+    MovementSpeed: 0.8
+    # Amount of base damage, in half-hearts. MC defaults: Easy = 2 - 3, Normal = 3, Hard = 4 - 5
+    AttackDamage: 10.0
+    # Resistance to knockback. MC default = 1.0
+    KnockbackResistance: 2.0
+    # Whether or not the boss should have the glowing effect. true or false
+    Glowing: true
+    # Amount of money to give to all players in the fight after boss has been killed
+    Reward: 10000.00
+
+  SkeletonBoss:
+    Region:
+      x1: 0.0
+      y1: 0.0
+      z1: 0.0
+      x2: 0.0
+      y2: 0.0
+      z2: 0.0
+    MaxHealth: 400.0
+    MovementSpeed: 1.2
+    AttackDamage: 10.0
+    KnockbackResistance: 1.5
+    Glowing: true
+    Reward: 25000
+
+  SpiderBoss:
+    Region:
+      x1: 0.0
+      y1: 0.0
+      z1: 0.0
+      x2: 0.0
+      y2: 0.0
+      z2: 0.0
+    MaxHealth: 400.0
+    MovementSpeed: 1.5
+    AttackDamage: 8.0
+    KnockbackResistance: 1.0
+    Glowing: true
+    Reward: 50000
+
+TestParent:
+  TestChild1:
+    TestChild2:
+      TestMessage: 'This is a test. Your path worked correctly.'

@@ -1,0 +1,12 @@
+name: MobBosses
+version: ${project.version}
+main: me.xalgorhythms.mobbosses.Main
+author: xAlgorhythms
+load: STARTUP
+api-version: 1.13
+prefix: MobBosses
+depend: [Vault]
+commands:
+  mobbosses:
+    description: main command for MobBosses plugin
+    aliases: [mb]
