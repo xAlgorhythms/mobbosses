@@ -1,11 +1,8 @@
 package me.xalgorhythms.mobbosses;
 
-import me.xalgorhythms.mobbosses.Commands.MobBossesCommand;
-import me.xalgorhythms.mobbosses.Files.BossList;
-import me.xalgorhythms.mobbosses.Files.RegionMapStorage;
-import me.xalgorhythms.mobbosses.Files.Regions;
-import me.xalgorhythms.mobbosses.BossRegions.BossRegion;
-import me.xalgorhythms.mobbosses.Listeners.PlayerInRegion;
+import me.xalgorhythms.mobbosses.commands.MobBossesCommand;
+import me.xalgorhythms.mobbosses.files.Regions;
+import me.xalgorhythms.mobbosses.listeners.PlayerInRegion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,17 +22,17 @@ public final class Main extends JavaPlugin {
 		BossList.get().options().copyDefaults(true);
 		BossList.save();*/
 
-		Regions.setup();
+		/*Regions.setup();
 		Regions.get().addDefault("Warning", "EDITING THIS FILE MAY BREAK THE PLUGIN. EDIT AT YOUR OWN RISK.");
 		Regions.get().options().copyDefaults(true);
 		Regions.save();
-		getLogger().info("Regions loaded successfully");
+		getLogger().info("Regions loaded successfully");*/
 
 		//RegionMapStorage.load();
 		//getLogger().info("Successfully deserialized regionMap storage");
 
 		Bukkit.getPluginManager().registerEvents(new PlayerInRegion(), this);
-		getCommand("mobbosses").setExecutor(new MobBossesCommand());
+		this.getCommand("mobbosses").setExecutor(new MobBossesCommand());
 
 		getLogger().info("The plugin has loaded successfully!");
 
